@@ -16,37 +16,101 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HSz-Uk-wa3">
-                                <rect key="frame" x="125" y="408" width="143" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqx-2R-vPF">
+                                <rect key="frame" x="156" y="412" width="80" height="70"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="aPj-lZ-1nb"/>
+                                    <constraint firstAttribute="height" constant="70" id="hZe-AE-F2I"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Кнопка"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQU-fn-W5F">
-                                <rect key="frame" x="125" y="408" width="143" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Кнопка"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.clockwise" catalog="system"/>
                                 <connections>
-                                    <action selector="buttonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Icu-Ci-sqy"/>
+                                    <action selector="buttonZeroDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aLR-PS-lgY"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFU-9Q-ggT">
-                                <rect key="frame" x="67" y="190" width="258" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hmm-AR-5Tz" userLabel="Text Status">
+                                <rect key="frame" x="45" y="523" width="307" height="143"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="143" id="DFl-Gz-zJH"/>
+                                    <constraint firstAttribute="width" constant="307" id="uia-eK-sjG"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="leV-5C-o9M" userLabel="Button  Minus">
+                                <rect key="frame" x="45" y="412" width="80" height="70"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Jn3-7w-EGA"/>
+                                    <constraint firstAttribute="width" constant="80" id="teZ-zh-agG"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="-">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="70"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonMinusDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pqu-Cw-SaS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olP-SA-L8j">
+                                <rect key="frame" x="72" y="257" width="249" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="249" id="HGf-1o-2Pn"/>
+                                    <constraint firstAttribute="height" constant="45" id="LvM-3j-XID"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQU-fn-W5F" userLabel="Button Plus">
+                                <rect key="frame" x="272" y="412" width="80" height="70"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="YRe-fv-jL2"/>
+                                    <constraint firstAttribute="height" constant="70" id="oCl-Xl-516"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="+">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="45"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonPlusDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kka-cy-WRp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="leV-5C-o9M" firstAttribute="top" secondItem="olP-SA-L8j" secondAttribute="bottom" constant="110" id="0Vf-x5-ZTv"/>
+                            <constraint firstItem="iQU-fn-W5F" firstAttribute="leading" secondItem="lqx-2R-vPF" secondAttribute="trailing" constant="36" id="0hd-sz-RJi"/>
+                            <constraint firstItem="iQU-fn-W5F" firstAttribute="top" secondItem="olP-SA-L8j" secondAttribute="bottom" constant="110" id="0o3-oN-f3t"/>
+                            <constraint firstItem="leV-5C-o9M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="4mn-oz-fDL"/>
+                            <constraint firstItem="hmm-AR-5Tz" firstAttribute="top" secondItem="leV-5C-o9M" secondAttribute="bottom" constant="41" id="Aq5-7G-LiN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="olP-SA-L8j" secondAttribute="trailing" constant="72" id="CEN-oy-RxD"/>
+                            <constraint firstItem="olP-SA-L8j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="72" id="FXa-oO-LjH"/>
+                            <constraint firstItem="iQU-fn-W5F" firstAttribute="leading" secondItem="lqx-2R-vPF" secondAttribute="trailing" constant="36" id="Tt2-iM-bmp"/>
+                            <constraint firstItem="lqx-2R-vPF" firstAttribute="leading" secondItem="leV-5C-o9M" secondAttribute="trailing" constant="31" id="YjF-ym-Zcl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hmm-AR-5Tz" secondAttribute="bottom" constant="152" id="aW8-mF-EUZ"/>
+                            <constraint firstItem="hmm-AR-5Tz" firstAttribute="top" secondItem="iQU-fn-W5F" secondAttribute="bottom" constant="41" id="b9k-Yf-YYW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iQU-fn-W5F" secondAttribute="trailing" constant="41" id="cEy-gW-1I1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hmm-AR-5Tz" secondAttribute="trailing" constant="41" id="ecy-xA-t4M"/>
+                            <constraint firstItem="hmm-AR-5Tz" firstAttribute="top" secondItem="lqx-2R-vPF" secondAttribute="bottom" constant="41" id="fqk-DS-aJ2"/>
+                            <constraint firstItem="hmm-AR-5Tz" firstAttribute="top" secondItem="iQU-fn-W5F" secondAttribute="bottom" constant="41" id="gfX-B5-Kgb"/>
+                            <constraint firstItem="hmm-AR-5Tz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="jlX-K2-0No"/>
+                            <constraint firstItem="lqx-2R-vPF" firstAttribute="top" secondItem="olP-SA-L8j" secondAttribute="bottom" constant="110" id="omi-Sc-Yg8"/>
+                            <constraint firstItem="olP-SA-L8j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="198" id="pS3-wL-9a5"/>
+                            <constraint firstItem="lqx-2R-vPF" firstAttribute="leading" secondItem="leV-5C-o9M" secondAttribute="trailing" constant="31" id="u0j-q7-w7q"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="buttonCounter" destination="iQU-fn-W5F" id="9in-Me-0bt"/>
-                        <outlet property="labelCounter" destination="VFU-9Q-ggT" id="5tU-bx-Xug"/>
+                        <outlet property="buttonMinus" destination="leV-5C-o9M" id="YQO-BO-Geg"/>
+                        <outlet property="buttonPlus" destination="iQU-fn-W5F" id="lFY-Z1-mNX"/>
+                        <outlet property="buttonZero" destination="lqx-2R-vPF" id="YfM-YY-F4y"/>
+                        <outlet property="textLabel" destination="olP-SA-L8j" id="hRC-dU-JQ4"/>
+                        <outlet property="textStatus" destination="hmm-AR-5Tz" id="ceY-hB-Hep"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -55,6 +119,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.clockwise" catalog="system" width="113" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
